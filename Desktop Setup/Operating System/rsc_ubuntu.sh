@@ -2,11 +2,9 @@
 # Copyright @ Reginald Sahil Chand | RSC Solutions 2024. All rights reserved.
 
 # Greetings.
-echo "Reginald Sahil Chand Welcomes You (WELCOME)\n"
-date
-echo "\nYou are\n"
-whoami
-echo "\n"
+echo "\nReginald Sahil Chand Welcomes You (WELCOME)\n"
+echo "Today is: $(date)\n"
+echo "You are $(whoami)\n"
 
 
 
