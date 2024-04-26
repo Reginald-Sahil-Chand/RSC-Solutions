@@ -9,7 +9,7 @@ echo "You are $(whoami)\n"
 # Update Ubuntu system.
 echo "FETCHING UBUNTU UPDATES\n"
 sudo apt update -y
-sudo apt-get udpate -y
+sudo apt-get update -y
 
 # Install updates if available.
 echo "\nINSTALLING REQUIRED UPDATES\n"
