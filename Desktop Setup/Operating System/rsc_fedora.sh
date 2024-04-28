@@ -10,13 +10,13 @@ echo "You are $(whoami)\n"
 echo "FETCHING AND DOWNLOADING FEDORA UPDATES\n"
 sudo dnf update -y
 
-# Setup RPM FUSION
+# Setup RPM Fusion
 echo "SETUP RPM FUSION\n"
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
 sudo dnf config-manager --enable fedora-cisco-openh264 -y
 sudo dnf groupupdate core -y
-sudo dnf install gstreamer1-plugin-openh264 mozilla-openh264 -y
 
+# Setup Multimedia.
 echo "\nSETUP MULTIMEDIA\n"
 sudo dnf swap ffmpeg-free ffmpeg --allowerasing -y
 sudo dnf groupupdate multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin -y
@@ -25,6 +25,9 @@ sudo dnf install intel-media-driver -y
 sudo dnf install rpmfusion-free-release-tainted -y
 sudo dnf install libdvdcss -y
 sudo dnf group install Multimedia -y
+
+echo "\nSETUP FIREFOX BROWSER OPENH2H4\n"
+sudo dnf install gstreamer1-plugin-openh264 mozilla-openh264 -y
 
 # Uninstall software's.
 echo "\nWARNING: Uninstalling Softwares.\n"
@@ -173,9 +176,16 @@ sudo dnf remove gnome-terminal -y
 echo "\nWarning: Removing not required extra packages from uninstalled apps.\n"
 sudo dnf autoremove -y
 
+clear
+
+# Inform user to download VSCODE from the official website.
 echo "\nDOWNLOAD MICROSOFT VISUAL STUDIO CODE FROM \"code.visualstudio.com\"\n"
 
-# End of operating message.
+# End of operation message.
 echo "\nThe operation has been successfully completed.\n THANK YOU\nBY REGINALD SAHIL CHAND\n"
+
+# Restart system.
+echo "\nRESTART SYSTEM\n"
+sudo reboot
 
 ##############################################################################################
