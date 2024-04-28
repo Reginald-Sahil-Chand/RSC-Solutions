@@ -40,6 +40,50 @@ sudo apt install git -y
 echo "\nINSTALLING PROPRIETORY MEDIA CODECS IF AVAILABLE ON YOUR SYSTEM\n"
 sudo apt install ubuntu-restricted-extras -y
 
+# Install Flatpak.
+echo "\nINSTALLING FLATPAK\n"
+sudo apt install flatpak -y
 
+# Setup Flathub.
+echo "\nSETTING UP FLATHUB\n"
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
+# Install required applications as flatpak from flathub.
+echo "\nINSTALLING REQUIRED APPLICATIONS AS FLATPAK FROM FLATHUB\n"
+
+echo "INSTALLING GNOME WEATHER\n"
+flatpak install flathub org.gnome.Weather
+
+echo "INSTALLING GNOME BUILDER\n"
+flatpak install flathub org.gnome.Builder
+
+echo "INSTALLING COLOR PALETTE\n"
+flatpak install flathub org.gnome.design.Palette
+
+echo "INSTALLING ICON LIBRARY\n"
+flatpak install flathub org.gnome.design.IconLibrary
+
+echo "INSTALLING FLATSWEEP\n"
+flatpak install flathub io.github.giantpinkrobots.flatsweep
+
+echo "INSTALLING ESCAMBO\n"
+flatpak install flathub io.github.cleomenezesjr.Escambo
+
+echo "INSTALLING ELASTIC\n"
+flatpak install flathub app.drey.Elastic
+
+echo "INSTALLING EYE DROPPER\n"
+flatpak install flathub com.github.finefindus.eyedropper
+
+echo "INSTALLING EMBLEM\n"
+flatpak install flathub org.gnome.design.Emblem
+
+echo "INSTALLING GAPHOR\n"
+flatpak install flathub org.gaphor.Gaphor
+
+echo "INSTALLING PIKA BACKUP\n"
+flatpak install flathub org.gnome.World.PikaBackup
+
+echo "INSTALLING WORKBENCH\n"
+flatpak install flathub re.sonny.Workbench
 
