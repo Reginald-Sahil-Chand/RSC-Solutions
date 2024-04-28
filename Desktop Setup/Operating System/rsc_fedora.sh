@@ -10,6 +10,22 @@ echo "You are $(whoami)\n"
 echo "FETCHING AND DOWNLOADING FEDORA UPDATES\n"
 sudo dnf update -y
 
+# Setup RPM FUSION
+echo "SETUP RPM FUSION\n"
+sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
+sudo dnf config-manager --enable fedora-cisco-openh264 -y
+sudo dnf groupupdate core -y
+sudo dnf install gstreamer1-plugin-openh264 mozilla-openh264 -y
+
+echo "\nSETUP MULTIMEDIA\n"
+sudo dnf swap ffmpeg-free ffmpeg --allowerasing -y
+sudo dnf groupupdate multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin -y
+sudo dnf groupupdate sound-and-video -y
+sudo dnf install intel-media-driver -y
+sudo dnf install rpmfusion-free-release-tainted -y
+sudo dnf install libdvdcss -y
+sudo dnf group install Multimedia -y
+
 # Uninstall software's.
 echo "\nWARNING: Uninstalling Softwares.\n"
 
