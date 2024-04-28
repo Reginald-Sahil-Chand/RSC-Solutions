@@ -87,3 +87,11 @@ flatpak install flathub org.gnome.World.PikaBackup
 echo "INSTALLING WORKBENCH\n"
 flatpak install flathub re.sonny.Workbench
 
+echo "INSTALLING AMBEROL\n"
+flatpak install flathub io.bassi.Amberol
+
+echo "INSTALLING Apostrophe\n"
+flatpak install flathub org.gnome.gitlab.somas.Apostrophe
+
+echo "INSTALLING CELLULOID\n"
+flatpak install flathub io.github.celluloid_player.Celluloid
