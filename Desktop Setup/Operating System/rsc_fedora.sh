@@ -176,8 +176,6 @@ sudo dnf remove gnome-terminal -y
 echo "\nWarning: Removing not required extra packages from uninstalled apps.\n"
 sudo dnf autoremove -y
 
-clear
-
 # Inform user to download VSCODE from the official website.
 echo "\nDOWNLOAD MICROSOFT VISUAL STUDIO CODE FROM \"code.visualstudio.com\"\n"
 
