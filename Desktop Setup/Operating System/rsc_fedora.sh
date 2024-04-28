@@ -6,12 +6,15 @@ echo "\nReginald Sahil Chand Welcomes You (WELCOME)\n"
 echo "Today is: $(date)\n"
 echo "You are $(whoami)\n"
 
-# Update Ubuntu system.
+# Update Fedora operating system.
 echo "FETCHING AND DOWNLOADING FEDORA UPDATES\n"
 sudo dnf update -y
 
 # Uninstall software's.
 echo "\nWARNING: Uninstalling Softwares.\n"
+
+echo "UNINSTALL FEDORA MEDIA WRITER\n"
+sudo dnf remove mediawriter -y
 
 echo "\nUNINSTALL GNOME:\nCALCULATOR,\nCALENDAR,\nCAMERA,\nCHARACTERS,\nCLOCKS,\nCONNECTIONS,\nCONTACTS,\nDISK USAGE ANALYZER,\nDOCUMENT SCANNER,\nDOCUMENT VIEWER,\nFONTS,\nIMAGE VIEWER,\nLOGS,\nMAPS,\nMUSIC,\nTEXT EDITOR,\nTOUR,\nVIDEOS,\nWEATHER\n"
 sudo dnf remove gnome-calculator gnome-calendar snapshot gnome-characters gnome-clocks gnome-connections gnome-contacts baobab, simple-scan evince gnome-font-viewer loupe gnome-logs gnome-maps gnome-music gnome-text-editor gnome-tour totem gnome-weather -y
@@ -57,82 +60,104 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 echo "\nINSTALLING REQUIRED APPLICATIONS AS FLATPAK FROM FLATHUB\n"
 
 echo "INSTALLING GNOME CALCULATOR\n"
-flatpak install flathub org.gnome.Calculator
+flatpak install flathub org.gnome.Calculator -y
 
 echo "\nINSTALLING GNOME CALENDAR\n"
-flatpak install flathub org.gnome.Calendar
+flatpak install flathub org.gnome.Calendar -y
 
 echo "\nINSTALLING GNOME CAMERA\n"
-flatpak install flathub org.gnome.Snapshot
+flatpak install flathub org.gnome.Snapshot -y
 
 echo "\nINSTALLING GNOME CHARACTERS\n"
-flatpak install flathub org.gnome.Characters
+flatpak install flathub org.gnome.Characters -y
 
 echo "\nINSTALLING GNOME CLOCKS\n"
-flatpak install flathub org.gnome.clocks
+flatpak install flathub org.gnome.clocks -y
 
 echo "\nINSTALLING GNOME DISK USAGE ANALYZER (BAOBAB)\n"
-flatpak install flathub org.gnome.baobab
+flatpak install flathub org.gnome.baobab -y
 
 echo "\nINSTALLING GNOME DOCUMENT VIEWER (EVINCE)\n"
-flatpak install flathub org.gnome.Evince
+flatpak install flathub org.gnome.Evince -y
 
 echo "\nINSTALLING GNOME EXTENSIONS\n"
-flatpak install flathub org.gnome.Extensions
+flatpak install flathub org.gnome.Extensions -y
 
 echo "\nINSTALLING GNOME FONT VIEWER\n"
-flatpak install flathub org.gnome.font-viewer
+flatpak install flathub org.gnome.font-viewer -y
 
 echo "\nINSTALLING GNOME IMAGE VIEWER (LOUPE)\n"
-flatpak install flathub org.gnome.Loupe
+flatpak install flathub org.gnome.Loupe -y
 
 echo "\nINSTALLING GNOME LOGS\n"
-flatpak install flathub org.gnome.Logs
+flatpak install flathub org.gnome.Logs -y
 
 echo "\nINSTALLING GNOME TEXT EDITOR\n"
-flatpak install flathub org.gnome.TextEditor
+flatpak install flathub org.gnome.TextEditor -y
 
 echo "\nINSTALLING GNOME WEATHER\n"
-flatpak install flathub org.gnome.Weather
+flatpak install flathub org.gnome.Weather -y
 
 echo "\nINSTALLING GNOME BUILDER\n"
-flatpak install flathub org.gnome.Builder
+flatpak install flathub org.gnome.Builder -y
 
 echo "\nINSTALLING COLOR PALETTE\n"
-flatpak install flathub org.gnome.design.Palette
+flatpak install flathub org.gnome.design.Palette -y
 
 echo "\nINSTALLING ICON LIBRARY\n"
-flatpak install flathub org.gnome.design.IconLibrary
+flatpak install flathub org.gnome.design.IconLibrary -y
 
 echo "\nINSTALLING FLATSWEEP\n"
-flatpak install flathub io.github.giantpinkrobots.flatsweep
+flatpak install flathub io.github.giantpinkrobots.flatsweep -y
 
 echo "\nINSTALLING ESCAMBO\n"
-flatpak install flathub io.github.cleomenezesjr.Escambo
+flatpak install flathub io.github.cleomenezesjr.Escambo -y
 
 echo "\nINSTALLING ELASTIC\n"
-flatpak install flathub app.drey.Elastic
+flatpak install flathub app.drey.Elastic -y
 
 echo "\nINSTALLING EYE DROPPER\n"
-flatpak install flathub com.github.finefindus.eyedropper
+flatpak install flathub com.github.finefindus.eyedropper -y
 
 echo "\nINSTALLING EMBLEM\n"
-flatpak install flathub org.gnome.design.Emblem
+flatpak install flathub org.gnome.design.Emblem -y
 
 echo "\nINSTALLING GAPHOR\n"
-flatpak install flathub org.gaphor.Gaphor
+flatpak install flathub org.gaphor.Gaphor -y
 
 echo "\nINSTALLING PIKA BACKUP\n"
-flatpak install flathub org.gnome.World.PikaBackup
+flatpak install flathub org.gnome.World.PikaBackup -y
 
 echo "\nINSTALLING WORKBENCH\n"
-flatpak install flathub re.sonny.Workbench
+flatpak install flathub re.sonny.Workbench -y
 
 echo "\nINSTALLING AMBEROL\n"
-flatpak install flathub io.bassi.Amberol
+flatpak install flathub io.bassi.Amberol -y
 
 echo "\nINSTALLING Apostrophe\n"
-flatpak install flathub org.gnome.gitlab.somas.Apostrophe
+flatpak install flathub org.gnome.gitlab.somas.Apostrophe -y
 
 echo "\nINSTALLING CELLULOID\n"
-flatpak install flathub io.github.celluloid_player.Celluloid
+flatpak install flathub io.github.celluloid_player.Celluloid -y
+
+echo "\nINSTALLING MOZILLA THUNDERBIRD\n"
+flatpak install flathub org.mozilla.Thunderbird -y
+
+echo "\nINSTALLING BRAVE BROWSER\n"
+flatpak install flathub com.brave.Browser
+
+echo "\nINSTALLING LIBRE OFFICE SUITE\n"
+flatpak install flathub org.libreoffice.LibreOffice
+
+# Uninstall Gnome Terminal.
+echo "\nWarning: Removing GNOME TERMINAL\n"
+sudo dnf remove gnome-terminal -y
+
+# Remove not required extra packages from uninstalled apps.
+echo "\nWarning: Removing not required extra packages from uninstalled apps.\n"
+sudo dnf autoremove -y
+
+# End of operating message.
+echo "\nThe operation has been successfully completed.\n THANK YOU\nBY REGINALD SAHIL CHAND\n"
+
+##############################################################################################
