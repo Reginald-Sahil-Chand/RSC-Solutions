@@ -157,6 +157,8 @@ sudo dnf remove gnome-terminal -y
 echo "\nWarning: Removing not required extra packages from uninstalled apps.\n"
 sudo dnf autoremove -y
 
+echo "\nDOWNLOAD MICROSOFT VISUAL STUDIO CODE FROM \"code.visualstudio.com\"\n"
+
 # End of operating message.
 echo "\nThe operation has been successfully completed.\n THANK YOU\nBY REGINALD SAHIL CHAND\n"
 
